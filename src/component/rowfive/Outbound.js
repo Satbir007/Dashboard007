@@ -11,7 +11,10 @@ const Outbound = () => {
   return (
     <>
       <Container fluid>
-        <IHeading title={"OutBound"} />
+        <IHeading
+          title={"OutBound"}
+          toolTipInfo={"This section provides the info about the Outbound"}
+        />
 
         <Row className="mt-3 py-2">
           <div>

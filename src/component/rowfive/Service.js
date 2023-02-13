@@ -11,17 +11,20 @@ const Service = () => {
   const [active, setActive] = useState("FirstContainer");
   const activeStyle = "border-bottom border-primary ";
   const nonActiveStyle = "border-bottom border-light";
-  const Mc = ["MC-08373501-4.49 CT HOT", 90, "info", "2,040"];
-  const Me = ["MC-08373501-4.49 CT CLASSIC", 50, "info", "1,387"];
-  const Gb = ["MC-08373501-4.49 CT CLASSIC", 35, "info", "1,491"];
-  const Fe = ["MC-08373501-4.49 CT CLASSIC", 51, "info", "1,024"];
-  const Rp = ["MC-08373501-4.49 CT CLASSIC", 52, "info", "1,678"];
+  const Mc = ["MC-08373501-4.49 CT HOT", 90, "info", "2,040", "#0dcaf0"];
+  const Me = ["MC-08373501-4.49 CT CLASSIC", 50, "info", "1,387", "#0dcaf0"];
+  const Gb = ["MC-08373501-4.49 CT CLASSIC", 35, "info", "1,491", "#0dcaf0"];
+  const Fe = ["MC-08373501-4.49 CT CLASSIC", 51, "info", "1,024", "#0dcaf0"];
+  const Rp = ["MC-08373501-4.49 CT CLASSIC", 52, "info", "1,678", "#0dcaf0"];
   return (
     <Container
       fluid
       className=" text-white bg-dark px-3 pt-3 pb-4 borderRadius"
     >
-      <IHeading title="Service" />
+      <IHeading
+        title="Service"
+        toolTipInfo={"This section provides the info about the Services"}
+      />
       <Row className="my-4">
         <Col>
           <DisplayInfoOne

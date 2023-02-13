@@ -6,8 +6,16 @@ import PickingProgress from "./PickingProgress";
 import PickRate from "./PickRate";
 import PickTime from "./PickTime";
 import "../../css/main.css";
+import Tooltip from "react-bootstrap/Tooltip";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
 const RowThree = () => {
+  const iTooltip = (
+    <Tooltip id="tooltip">
+      This section provides the info about Pickup services
+    </Tooltip>
+  );
+
   return (
     <Row className=" mx-2 mt-3 pb-2 bg-dark borderRadius">
       <Col xl={4} sm={6}>
@@ -19,7 +27,9 @@ const RowThree = () => {
       <Col xl={4} sm={12}>
         <Row>
           <Col className="d-flex flex-row-reverse mx-2 mt-2">
-            <Icon.InfoCircleFill color="white" size="20" />
+            <OverlayTrigger placement="left" overlay={iTooltip}>
+              <Icon.InfoCircleFill color="white" size="20" />
+            </OverlayTrigger>
           </Col>
         </Row>
         <Row className="pt-3 ">

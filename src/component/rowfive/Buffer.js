@@ -12,15 +12,20 @@ import "../../css/main.css";
 import CircularProgressBar from "../UI/CircularProgressBar";
 
 const Buffer = () => {
-  const Mc = ["MC", 80, "primary", "80%"];
-  const Me = ["ME", 39, "primary", "39%"];
-  const Gb = ["GB", 41, "primary", "41%"];
-  const Fe = ["FE", 22, "primary", "22%"];
-  const Rp = ["RP", 50, "primary", "50%"];
+  const Mc = ["MC", 80, "primary", "80%", "#0d6efd"];
+  const Me = ["ME", 39, "primary", "39%", "#0d6efd"];
+  const Gb = ["GB", 41, "primary", "41%", "#0d6efd"];
+  const Fe = ["FE", 22, "primary", "22%", "#0d6efd"];
+  const Rp = ["RP", 50, "primary", "50%", "#0d6efd"];
 
   return (
     <Container fluid>
-      <IHeading title={"Buffer"} />
+      <IHeading
+        title={"Buffer"}
+        toolTipInfo={
+          "This section provides the info about the buffer utilization"
+        }
+      />
       <Row>
         <Col>
           <Row className="d-flex justify-content-center px-5">

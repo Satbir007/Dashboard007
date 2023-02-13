@@ -2,8 +2,8 @@ import Chart from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
 import { Container } from "react-bootstrap";
 import "../../css/main.css";
-// import ChartDataLabels from "chartjs-plugin-datalabels";
-// Chart.register(ChartDataLabels);
+import ChartDataLabels from "chartjs-plugin-datalabels";
+Chart.register(ChartDataLabels);
 
 const BarChart = () => {
   const data = {
@@ -69,15 +69,13 @@ const BarChart = () => {
     responsive: true,
     plugins: {
       datalabels: {
-        display: false,
-        //   anchor: "end",
-        //   align: "top",
-        //   formatter: Math.round,
-        //   font: {
-        //     weight: "bold",
-        //     size: 12,
-        //     color: "white",
-        //   },
+        display: true,
+        anchor: "end",
+        align: "top",
+        formatter: Math.round,
+        font: {
+          size: 8,
+        },
       },
       legend: {
         display: false,

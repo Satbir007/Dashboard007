@@ -4,11 +4,28 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import * as Icon from "react-bootstrap-icons";
+import Tooltip from "react-bootstrap/Tooltip";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import "../../css/main.css";
 
 const DisplayInfoThree = (props) => {
   const formattedVal = props.val.toLocaleString("en-US");
   const formattedTotalVal = props.totalVal.toLocaleString("en-US");
+  const iTooltip = (
+    <Tooltip id="tooltip">
+      This section provides the info about sorter services
+    </Tooltip>
+  );
+
+  const iBarTooltip = (
+    <Tooltip id="btooltip">
+      <span>
+        <Icon.SquareFill color="#0dcaf0" size="15" />
+      </span>{" "}
+      Percentage: <strong>{props.percentage}%</strong>
+    </Tooltip>
+  );
+
   return (
     <Container fluid className=" text-white borderRadius pt-2">
       <Row>
@@ -17,7 +34,9 @@ const DisplayInfoThree = (props) => {
         </Col>
         {props.displayInfo === 1 && (
           <Col className="d-flex flex-row-reverse mx-2 mt-2">
-            <Icon.InfoCircleFill color="white" size="20" />
+            <OverlayTrigger placement="top" overlay={iTooltip}>
+              <Icon.InfoCircleFill color="white" size="20" />
+            </OverlayTrigger>
           </Col>
         )}
       </Row>
@@ -39,7 +58,9 @@ const DisplayInfoThree = (props) => {
       </Row>
       <Row className="px-1">
         <div>
-          <ProgressBar animated variant="info" now={props.percentage} />
+          <OverlayTrigger placement="top" overlay={iBarTooltip}>
+            <ProgressBar animated variant="info" now={props.percentage} />
+          </OverlayTrigger>
         </div>
       </Row>
     </Container>
