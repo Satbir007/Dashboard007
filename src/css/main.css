@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.bgitems {
+  background-color: rgb(33, 37, 41);
+}
+
+.bgBlack {
+  background-color: black;
+}
+
+.MainDiv {
+  position: relative;
+  /* height: calc(100vh - 55px); */
+  background-color: black;
+}
+
+.navMargin {
+  margin-left: 64px;
+}
+
+.borderRight {
+  border-right: 1px solid rgb(78, 75, 75);
+}
+
+.borderRadius {
+  border-radius: 8px;
+}
+
+.xxl {
+  font-size: 50px;
+}
+
+.small {
+  font-size: 12px;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.barGraphHeight {
+  max-height: 100px;
+}
